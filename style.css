@@ -1,3 +1,4 @@
+/* Place your CSS styles in this file */
 *{
     box-sizing: border-box;
     padding:0;
@@ -15,30 +16,50 @@
     .box{
         cursor: pointer;
         display:flex;
-        flex-wrap: wrap;
+        justify-content: center;
         padding: 10px;
-        /* width:90%; */
-        box-shadow: 2px 2px 6px grey;
-        border-radius: 10px;
-        margin:20px 0 30px;
+        margin:20px 0;
         background-color: white;
     }
+    @media screen and (min-width: 940px)
+    {
+        .box{
+            flex-direction: row;
+        }
+        .colorplate{
+            width:35%;
+        }
+        .toolbox{
+            width:65%;
+        }
+    }
+    @media screen and (max-width: 940px) {
+  /* Your CSS styles here */
+      .box{
+        flex-direction: column;
+      }
+      .colorplate, .toolBox{
+        width:100%;
+      }
+}
     .colorplate{
-        width:35%;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content:center;
     }
     .colorplate div{
-        display:inline-block;
-        margin:5px 8px;
         height:30px;
         width:30px;
-        border-radius: 100%;
+        margin:12px;
+        border-radius: 50%;
     }
     .toolBox{
         display:flex;
-        width:65%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
     .toolBox div{
-        width:16%;
+        width:70px;
     }
     span{
         display:flex;
@@ -50,7 +71,8 @@
         padding:20px;
     }
     img{
-        
+        width:70px;
+        height:70px;
     }
     #current{
         display:inline-block;
